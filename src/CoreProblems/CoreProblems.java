@@ -1,28 +1,26 @@
 package CoreProblems;
 import java.util.Scanner;
 public class CoreProblems {
-	// Function to find N-th Harmonic Number
-	static double nthHarmonic(int N)
-	{
-		// H1 = 1
-		float harmonic = 1;
+    // Calculating the Prime Factors
 
-		// loop to apply the forumula
-		// Hn = H1 + H2 + H3 ... + Hn-1 + Hn-1 + 1/n
-		for (int i = 2; i <= N; i++) {
-			harmonic += (float)1 / i;
-		}
+    public static void main(String[] args) {
+        int num;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        num = sc.nextInt();
+        System.out.println("Prime Factors are : ");
 
-		return harmonic;
-	}
-	
+        for (int i = 2; i < num; i++) {
+            while (num % i == 0) {
+                System.out.println(i + " ");
+                num = num / i;
+            }
+        }
+        if (num > 2) {
+            System.out.println(num);
+        }
 
-	public static void main (String[] args) {
-	    Scanner sc = new Scanner(System.in);  
-	    System.out.print("Enter a number: ");  
-	    int N = sc.nextInt();
-		
-		System.out.print(nthHarmonic(N));
-		
-	}
+
+
+    }
 }
