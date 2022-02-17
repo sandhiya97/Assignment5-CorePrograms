@@ -1,16 +1,24 @@
 package CoreProblems;
 import java.util.Scanner;
 public class CoreProblems {
-    // Vowel Or Consonant
+    // Largest of Three Numbers
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a character : ");
-        char ch = sc.next().charAt(0);
-
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
-            System.out.println(ch + " is a vowel");
-        else
-            System.out.println(ch + " is a consonant");
+    	int a, b, c, largest, temp;  
+    	//object of the Scanner class  
+    	Scanner sc = new Scanner(System.in);  
+    	//reading input from the user  
+    	System.out.println("Enter the first number:");  
+    	a = sc.nextInt();  
+    	System.out.println("Enter the second number:");  
+    	b = sc.nextInt();  
+    	System.out.println("Enter the third number:");  
+    	c = sc.nextInt();  
+    	//comparing a and b and storing the largest number in a temp variable  
+    	temp=a>b?a:b;  
+    	//comparing the temp variable with c and storing the result in the variable  
+    	largest=c>temp?c:temp;  
+    	//prints the largest number  
+    	System.out.println("The largest number is: "+largest); 
     }
 }
