@@ -1,20 +1,31 @@
 package CoreProblems;
 import java.util.Scanner;
 public class CoreProblems {
-    // Calculating the Quotient and Reminder
+    // Swapping two numbers
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the dividend: ");
-        int dividend = sc.nextInt();
+        System.out.print("Enter the first number: ");
+        float first = sc.nextFloat();
         Scanner sc1 = new Scanner(System.in);
-        System.out.print("Enter the divisor: ");
-        int divisor = sc.nextInt();
+        System.out.print("Enter the second number: ");
+        float second = sc.nextFloat();
 
-        int quotient = dividend / divisor;
-        int remainder = dividend % divisor;
+        System.out.println("--Before swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
 
-        System.out.println("The Quotient is = " + quotient);
-        System.out.println("The Remainder is = " + remainder);
+        // Value of first is assigned to temporary
+        float temporary = first;
+
+        // Value of second is assigned to first
+        first = second;
+
+        // Value of temporary (which contains the initial value of first) is assigned to second
+        second = temporary;
+
+        System.out.println("--After swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
     }
 }
