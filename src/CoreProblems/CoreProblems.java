@@ -4,23 +4,17 @@ public class CoreProblems {
     // Calculating the Prime Factors
 
     public static void main(String[] args) {
-        int num;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        num = sc.nextInt();
-        System.out.println("Prime Factors are : ");
+    	Scanner sc = new Scanner(System.in);  
+  	  System.out.print("Enter the dividend: ");  
+  	  int dividend = sc.nextInt();
+  	  Scanner sc1 = new Scanner(System.in);  
+  	  System.out.print("Enter the divisor: ");  
+  	  int divisor = sc.nextInt();
+  	  
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
 
-        for (int i = 2; i < num; i++) {
-            while (num % i == 0) {
-                System.out.println(i + " ");
-                num = num / i;
-            }
-        }
-        if (num > 2) {
-            System.out.println(num);
-        }
-
-
-
+        System.out.println("The Quotient is = " + quotient);
+        System.out.println("The Remainder is = " + remainder);
     }
 }
