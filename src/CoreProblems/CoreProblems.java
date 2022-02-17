@@ -1,7 +1,7 @@
 package CoreProblems;
 import java.util.Scanner;
 public class CoreProblems {
-    // Calculating the Prime Factors
+    // Calculating the Quotient and Reminder
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
