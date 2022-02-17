@@ -1,13 +1,16 @@
 package CoreProblems;
 import java.util.Scanner;
 public class CoreProblems {
-    // Odd or Even
+    // Vowel Or Consonant
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int number = sc.nextInt();
-        String msg = (number % 2 == 0) ? "The number is even!" : "The number is odd!";
-        System.out.println(msg);
+        System.out.println("Enter a character : ");
+        char ch = sc.next().charAt(0);
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+            System.out.println(ch + " is a vowel");
+        else
+            System.out.println(ch + " is a consonant");
     }
 }
